@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bunx --bun vite",
-    "build": "bunx --bun vite build",
-    "preview": "bunx --bun vite preview"
+    "build": "bunx --bun vite build --outDir docs",
+    "preview": "bunx --bun vite preview --outDir docs"
   },
   "dependencies": {
     "@thisbeyond/solid-dnd": "^0.7.5",
