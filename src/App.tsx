@@ -189,13 +189,15 @@ export function App() {
                 ? 'hls'
                 : 'dash'
               return (
-                <div class="stream-item-container">
+                <div
+                  class={`stream-item-container ${src()?.playbackUrl === stream.playbackUrl ? 'active' : ''}`}
+                >
                   <span class={`stream-type-label ${streamType}`}>
                     {streamType}
                   </span>
                   <button
                     type="button"
-                    class={`stream-item ${src()?.playbackUrl === stream.playbackUrl ? 'active' : ''}`}
+                    class="stream-item"
                     onClick={() =>
                       selectStream(stream.playbackUrl, stream.licenseUrl)
                     }

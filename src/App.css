@@ -12,6 +12,45 @@
   overflow: hidden;
 }
 
+.stream-item-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.stream-item-container:last-child {
+  border-bottom: none;
+}
+
+.stream-item-container:hover {
+  background-color: #f0f5ff;
+}
+
+.stream-item-container:focus-visible {
+  box-shadow: inset 0 0 0 2px #4a90e2;
+}
+
+.stream-item-container:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.stream-item-container.active:after {
+  background-color: #4a7aff;
+}
+
+.stream-item-container.active {
+  background-color: #f5f8ff;
+}
+
 .stream-item {
   padding: 0.4rem 0.5rem;
   cursor: pointer;
@@ -22,7 +61,6 @@
   width: 100%;
   transition: all 0.15s ease;
   outline: none;
-  position: relative;
   font-size: 0.8rem;
   color: #666;
   word-break: break-all;
@@ -35,33 +73,6 @@
   margin-right: 4px;
 }
 
-.stream-item:hover {
-  background-color: #f0f5ff;
-}
-
-.stream-item:focus-visible {
-  box-shadow: inset 0 0 0 2px #4a90e2;
-}
-
-.stream-item:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: transparent;
-  transition: background-color 0.15s ease;
-}
-
-.stream-item.active:after {
-  background-color: #4a7aff;
-}
-
-.stream-item.active {
-  background-color: #f5f8ff;
-}
-
 .stream-item-name {
   font-weight: bold;
   font-size: 0.9rem;
@@ -72,17 +83,6 @@
 .stream-item-url {
   font-size: 0.8rem;
   color: #666;
-}
-
-.stream-item-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #eee;
-}
-
-.stream-item-container:last-child {
-  border-bottom: none;
 }
 
 .delete-btn {
