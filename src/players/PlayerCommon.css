@@ -1,0 +1,49 @@
+.player-container {
+  width: 320px;
+  height: 240px;
+  background-color: black;
+  position: relative;
+}
+
+.player-container .player-label {
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 4px;
+  height: 14px;
+  z-index: 2;
+  pointer-events: none;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: monospace;
+}
+
+.player-container .player-label.player-name-label {
+  top: 0;
+  left: 0;
+  border-radius: 0 0 10px 0;
+}
+
+.player-container .player-label.player-status-label {
+  bottom: 0;
+  left: 0;
+}
+
+.player-container .player-label.player-time-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  background-color: unset;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.player-container .player-label.player-time-label div {
+  padding: 2px 4px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: fit-content;
+  text-align: right;
+}

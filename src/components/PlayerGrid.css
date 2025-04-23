@@ -1,0 +1,98 @@
+.player-grid-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.player-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.player-grid-row {
+  display: flex;
+  width: 100%;
+}
+
+.player-cell {
+  width: 320px;
+  height: 240px;
+  position: relative;
+  margin: 2px;
+  user-select: none;
+}
+
+.player-cell.filled {
+  background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 980px) {
+  .player-grid-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .player-cell {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Player instance styling */
+.player-instance {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make video elements fill their containers */
+.player-instance video,
+.player-instance > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Player selection styling */
+.player-selection {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.player-selection h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.player-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.player-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.player-checkbox-label:hover {
+  background-color: #f0f0f0;
+}
+
+.player-checkbox-label input {
+  margin: 0;
+}
